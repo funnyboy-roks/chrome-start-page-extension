@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+
+* {
+    /* font-family: 'Comfortaa', cursive; */
+    font-family: 'Montserrat', sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+html {
+    background: #111;
+    color: whitesmoke;
+    height: 100%;
+}
+
+#weather {
+    position: absolute;
+    font-size: 1.2em;
+    max-width: 33%;
+}
+
+#weather p {
+    text-align: left;
+}
+
+#desc-img{
+    margin: auto;
+    height: 200px;
+    display: block;
+    border: 5px solid #666;
+}
+
+#temp{
+    font-size: 4em;
+}
+
+#last-update{
+    font-size: .2em;
+}
+
+#short-desc {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted white;
+}
+
+#desc-tooltip #long-desc {
+    visibility: hidden;
+    width: 100%;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border: 2px solid #eee;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+    padding: 5px 0;
+
+
+    position: absolute;
+    z-index: 1;
+}
+
+#desc-tooltip:hover #long-desc {
+    visibility: visible;
+}
+
+.container {
+    /* height: 100vh;
+    display: flex; */
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#time-container{
+    user-select: none;
+}
+
+#time, #greeting {
+    font-weight: bold;
+    font-size: 10em;
+    cursor: default;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+#greeting{
+    font-size: 2em;
+}
+
+
+.sticky-bottom {
+    position: absolute;
+    font-size: 2em;
+    top: calc(100% - 2.25em);
+    padding: .5em;
+
+}
+
+#fav-button {
+
+    font-weight: bold;
+    background: none;
+    color: white;
+    border: none;
+}
+
+#fav-button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #bbb;
+}
+
+#search-box {
+    left: 50%;
+    transform: translate(-50%, -.1em);
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    text-align: center;
+    border-bottom: none;
+    cursor: pointer;
+    transition: .5s border ease-in-out;
+}
+
+#search-box:focus {
+    cursor: text;
+    border-bottom: .1em white solid;
+}
+
+
+.side-fav-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: .5s;
+}
+
+.side-fav-nav * {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: .3s;
+}
+
+.side-fav-nav *:hover {
+    color: #f1f1f1;
+}
+
+.side-fav-nav .close-side-fav-nav {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.overlay-full {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    background: #0005;
+    display: none;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.empty {
+    font-family: Arial, FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
